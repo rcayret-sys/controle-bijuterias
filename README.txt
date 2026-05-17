@@ -21,3 +21,16 @@ Arquivos principais:
 
 
 Correção: app.py recriado com apenas a interface, importando funções dos módulos.
+
+
+Acesso por senha:
+- O arquivo auth.py bloqueia o sistema até a senha ser digitada.
+- No Streamlit Cloud, configure:
+  App > Settings > Secrets
+
+Conteúdo:
+APP_PASSWORD = "sua_senha_aqui"
+
+Importante:
+- Não coloque sua senha real no GitHub.
+- O arquivo .streamlit/secrets.toml.example é apenas exemplo.

@@ -1,5 +1,6 @@
 import sqlite3
 import streamlit as st
+from auth import verificar_acesso, sair
 
 from database import criar_tabelas
 from configuracoes import carregar_configuracoes, salvar_configuracoes
@@ -37,7 +38,15 @@ st.set_page_config(
     layout="wide"
 )
 
+verificar_acesso()
+
 st.title(f"{icone_programa} {nome_programa}")
+
+col_sair, col_vazio = st.columns([1, 5])
+with col_sair:
+    if st.button("Sair"):
+        sair()
+
 st.divider()
 
 opcoes_menu = [
