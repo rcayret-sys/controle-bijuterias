@@ -34,3 +34,5 @@ APP_PASSWORD = "sua_senha_aqui"
 Importante:
 - Não coloque sua senha real no GitHub.
 - O arquivo .streamlit/secrets.toml.example é apenas exemplo.
+
+Banco online: configure DATABASE_URL nos Secrets do Streamlit Cloud. Se não houver DATABASE_URL, usa SQLite local.
