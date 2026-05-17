@@ -36,3 +36,10 @@ Importante:
 - O arquivo .streamlit/secrets.toml.example é apenas exemplo.
 
 Banco online: configure DATABASE_URL nos Secrets do Streamlit Cloud. Se não houver DATABASE_URL, usa SQLite local.
+
+
+Otimização de performance:
+- database.py agora usa st.cache_resource para reaproveitar a engine SQLAlchemy.
+- Consultas de leitura usam st.cache_data com TTL de 20 segundos.
+- Após gravações, o cache de leitura é limpo automaticamente.
+- Foram adicionados índices básicos no PostgreSQL.
